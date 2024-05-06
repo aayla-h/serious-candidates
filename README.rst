@@ -1,153 +1,216 @@
-# QuanTom
+QuanTom
+=======
 
 Functionality for solving quantum mechanic equations.
 
+Tutorial
+--------
 
-## Tutorial
+In this tutorial we will see how to use ‘QuanTom’ to solve simple
+quantum equations. These equations can be used to calculate wave speed,
+photon energy, De Broglie wavelength and kinetic energy. For some
+background information
 
-In this tutorial we will see how to use 'QuanTom' to solve simple quantum equations. These equations can be used to calculate wave speed, photon energy, De Broglie wavelength and kinetic energy. For some background information <insert wiki link >
+The process in which ‘QuanTom’ is used is very simple. For example, if
+someone wanted to calculate the wave speed of a moving particle in
+quantum mechanics, and they knew the frequency and wavelength of said
+particle, they would merely have to import our library:
 
-The process in which 'QuanTom' is used is very simple. For example, if someone wanted to calculate the wave speed of a moving particle in quantum mechanics, and they knew the frequency and wavelength of said particle, they would merely have to import our library:
+.. code:: python
 
-```python
-import QuanTom 
+   import QuanTom 
 
-wave_speed = QuanTom1.calculate_wave_speed(wavelength=X, frequency=Y)
-wave_speed
-```
-Simply putting in the values for X and Y will return the calculated wave speed. This process can be used for all other equations by rewriting the input with what it is you want to calculate and which variables are necessary.
+   wave_speed = QuanTom1.calculate_wave_speed(wavelength=X, frequency=Y)
+   wave_speed
 
+Simply putting in the values for X and Y will return the calculated wave
+speed. This process can be used for all other equations by rewriting the
+input with what it is you want to calculate and which variables are
+necessary.
 
-## How To Guides
+How To Guides
+-------------
 
-### How to calculate Kinetic Energy
+How to calculate Kinetic Energy
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-As mentioned before in the tutorial, the QuanTom function does all the work for you all we need to do is simply plug in values. We've seen the basics of how it works for wave speed but now let's see a proper example of how to effectively use QuanTom.
+As mentioned before in the tutorial, the QuanTom function does all the
+work for you all we need to do is simply plug in values. We’ve seen the
+basics of how it works for wave speed but now let’s see a proper example
+of how to effectively use QuanTom.
 
-The equation for Kinetic Energy: 
+The equation for Kinetic Energy:
 
-$KE$ = $\frac{1}{2}mv^2$
+:math:`KE` = :math:`\frac{1}{2}mv^2`
 
-With $m$ = Mass (kg), and $v$ = Velocity (m/s)
+With :math:`m` = Mass (kg), and :math:`v` = Velocity (m/s)
 
-As we are working with quantum mechanics, this equation is usually applied to the kinetic energy of an electron which has a fixed mass:
+As we are working with quantum mechanics, this equation is usually
+applied to the kinetic energy of an electron which has a fixed mass:
 
-$9.11$ x $10^{-31}kg$
+:math:`9.11` x :math:`10^{-31}kg`
 
-If you en electron was travelling at a velocity of $3000 m/s$ , using the QuanTom function it would be easy to work out the electron's Kinetic Energy ($KE$):
+If you en electron was travelling at a velocity of :math:`3000 m/s` ,
+using the QuanTom function it would be easy to work out the electron’s
+Kinetic Energy (:math:`KE`):
 
+.. code:: python
 
-```python
-import QuanTom
+   import QuanTom
 
-kinetic_energy = QuanTom.calculate_kinetic_energy(velocity=3000)
-kinetic_energy
-```
+   kinetic_energy = QuanTom.calculate_kinetic_energy(velocity=3000)
+   kinetic_energy
+
 This gives:
 
-```python 
-4.0995e-24
-```
-### How to calculate the energy of a photon 
+.. code:: python
 
-Just like the Kinetic Energy of an electron, using the QuanTom fucnction for Photon energy noly requires substituting in values, although unlike Kinetic Energy there isn't only one equation involved.
+   4.0995e-24
 
+How to calculate the energy of a photon
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Just like the Kinetic Energy of an electron, using the QuanTom fucnction
+for Photon energy noly requires substituting in values, although unlike
+Kinetic Energy there isn’t only one equation involved.
 
 The three equations QuanTom uses for Photon energy are:
 
-$PE = \frac{hc}{\lambda}$  
+:math:`PE = \frac{hc}{\lambda}`
 
-Where $h$ = Plancks Constant, c = Speed of Light (m/s) and $\lambda$ = Wavelength (m)
+Where :math:`h` = Plancks Constant, c = Speed of Light (m/s) and
+:math:`\lambda` = Wavelength (m)
 
-$PE = hf$
+:math:`PE = hf`
 
-Where $h$ = Plancks Constant and $f$ = frequency (Hz)
+Where :math:`h` = Plancks Constant and :math:`f` = frequency (Hz)
 
-$PE = \frac{h}{t}$
+:math:`PE = \frac{h}{t}`
 
-Where $h$ = Plancks Constant and $t$ = time (s)
+Where :math:`h` = Plancks Constant and :math:`t` = time (s)
 
-All 3 equations can be solved by QuanTom in the same way as before. For an example, we will use the equation involving Plancks Constant, Speed of light and Wavelength.
-The speed of light and Plancks Constant are both fixed values that have already been inputted into the QuanTom fucntion.
+All 3 equations can be solved by QuanTom in the same way as before. For
+an example, we will use the equation involving Plancks Constant, Speed
+of light and Wavelength. The speed of light and Plancks Constant are
+both fixed values that have already been inputted into the QuanTom
+fucntion.
 
-If a photon were to have a wavelength of $5$ metres:
+If a photon were to have a wavelength of :math:`5` metres:
 
-```python
-import QuanTom
+.. code:: python
 
-photon_energy = QuanTom.calculate_photon_energy(wavelength=5)
-photon_energy
-```
+   import QuanTom
+
+   photon_energy = QuanTom.calculate_photon_energy(wavelength=5)
+   photon_energy
 
 This gives:
 
-```python
-3.9756e-26
-```
+.. code:: python
 
-## Explanation
+   3.9756e-26
 
-### Brief overview of quantum mechanics
+Explanation
+-----------
 
-Quantum mechanics describes the behaviour of particles at the smallest scales, referring to atoms and subatomic particles. It introduces the idea that electrons and photons can possibly exist in multiple states simultaneously. Quantum mechanics is the foundation for all areas of quantum Physics which branches out into so many fields. Our function 'QuanTom' focuses on the 'Wave-particle duality' and solving equations within this sector of quantum mechanics.
+Brief overview of quantum mechanics
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-### Photons 
+Quantum mechanics describes the behaviour of particles at the smallest
+scales, referring to atoms and subatomic particles. It introduces the
+idea that electrons and photons can possibly exist in multiple states
+simultaneously. Quantum mechanics is the foundation for all areas of
+quantum Physics which branches out into so many fields. Our function
+‘QuanTom’ focuses on the ‘Wave-particle duality’ and solving equations
+within this sector of quantum mechanics.
 
-In 1905, Einstein showed that atoms absorb and emit light in individual packets of energy. Einstein's explanation opened up the paradox that sometimes light's behaviour can only be explained by thinking of it as consisting of particles. Louis de Broglie showed light could behave both as a particle and a wave and so Quantas of light became known as photons.
+Photons
+~~~~~~~
+
+In 1905, Einstein showed that atoms absorb and emit light in individual
+packets of energy. Einstein’s explanation opened up the paradox that
+sometimes light’s behaviour can only be explained by thinking of it as
+consisting of particles. Louis de Broglie showed light could behave both
+as a particle and a wave and so Quantas of light became known as
+photons.
 
 This formed the equation for a single photon:
 
-$E = hf$
+:math:`E = hf`
 
-Where $E$ = Photon Energy, $h$ = Plancks Constant and $f$ = frequency
+Where :math:`E` = Photon Energy, :math:`h` = Plancks Constant and
+:math:`f` = frequency
 
-### Kinetic Energy and De Broglie's Wavelength
+Kinetic Energy and De Broglie’s Wavelength
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-From the wave of new ideas surrounding light, the wave-particle duality theory was born. Louis de Broglie suggested that all matter could display wave-like properties. He proposed that if electrons and other particles travel through space as a wave, they have an associated wavelength. The predicted wavelength is found by equating the work done to accelerate the electrons with the kinetic energy transferred to the electrons. Substituting:
+From the wave of new ideas surrounding light, the wave-particle duality
+theory was born. Louis de Broglie suggested that all matter could
+display wave-like properties. He proposed that if electrons and other
+particles travel through space as a wave, they have an associated
+wavelength. The predicted wavelength is found by equating the work done
+to accelerate the electrons with the kinetic energy transferred to the
+electrons. Substituting:
 
-$KE$ = $\frac{1}{2}mv^2$
+:math:`KE` = :math:`\frac{1}{2}mv^2`
 
 we get:
 
-$\lambda = \frac{h}{mv}$
+:math:`\lambda = \frac{h}{mv}`
 
-Where $\lambda$ = De Broglie's Wavelength, $m$ = mass, $h$ = Plancks Constant  and $v$ = velocity
+Where :math:`\lambda` = De Broglie’s Wavelength, :math:`m` = mass,
+:math:`h` = Plancks Constant and :math:`v` = velocity
 
 This equation can be simplied as:
 
-$\lambda = \frac{h}{p}$
+:math:`\lambda = \frac{h}{p}`
 
-Where $p$ = momentum 
+Where :math:`p` = momentum
 
-### Photoelectric Effect 
+Photoelectric Effect
+~~~~~~~~~~~~~~~~~~~~
 
-Einstein's explanation for the Photoelectric Effect was that in order for electrons to be realeased from a metal, the incident radiation must exceed the the threshold frequency for that metal. The minimum energy required is called the work function. Einstein then suggested each single photon could only eject one electron from the metal surface, if the photon energy was larger than the work function. Using the pricniple of conservation of energy, Einstein created the equation:
+Einstein’s explanation for the Photoelectric Effect was that in order
+for electrons to be realeased from a metal, the incident radiation must
+exceed the the threshold frequency for that metal. The minimum energy
+required is called the work function. Einstein then suggested each
+single photon could only eject one electron from the metal surface, if
+the photon energy was larger than the work function. Using the pricniple
+of conservation of energy, Einstein created the equation:
 
-$hf = \phi + KE_{max}$
+:math:`hf = \phi + KE_{max}`
 
-Where $hf$ = photon energy, $\phi$ = work function and $KE_{max}$ = the maximum kinetic energy
+Where :math:`hf` = photon energy, :math:`\phi` = work function and
+:math:`KE_{max}` = the maximum kinetic energy
 
-## References
+References
+----------
 
-### List of functionality
+List of functionality
+~~~~~~~~~~~~~~~~~~~~~
 
 The following fucntions are written in QuanTom:
 
-      . calculate_wave_speed
-      . calculate_de_broglie
-      . calculate_photon_energy
-      . calculate_photoelectric_effect
-      . calculate_kinetic energy
+::
 
-### Bibliography
+     . calculate_wave_speed
+     . calculate_de_broglie
+     . calculate_photon_energy
+     . calculate_photoelectric_effect
+     . calculate_kinetic energy
 
-The wikipedia page on quantum mechanics gives a good overview of the subject: <insert link>
+Bibliography
+~~~~~~~~~~~~
+
+The wikipedia page on quantum mechanics gives a good overview of the
+subject:
 
 The following text is a recommended reference on quantum mechanics:
 
->Piccirillo, L. (2023). Introduction to the Maths and Physics of Quantum Mechanics. CRC Press.
+   Piccirillo, L. (2023). Introduction to the Maths and Physics of
+   Quantum Mechanics. CRC Press.
 
 The following textbook is a recommeneded referene on quantum physics:
 
->O’neill, M. (2015). OCR AS/A level physics A. Student book 1. Pearson.
-‌
+   O’neill, M. (2015). OCR AS/A level physics A. Student book 1.
+   Pearson. ‌
